@@ -7,7 +7,7 @@
     <label>Twitter Gateway</label>
     <description>Adds new gateways to connect to the streaming APIs provided by Twitter. Use these to get low latency access to Twitter's global stream of Tweet data. Get rid of the overhead associated with polling a REST endpoint and have messages indicating Tweets and other events directly pushed into your application.</description>
     <version>@VERSION@</version>
-    <image>https://g.twimg.com/Twitter_logo_blue.png</image>
+    <image>https://raw.github.com/jbvanzuylen/cf-twitter-gateway/master/railo/twitter_logo_blue.png</image>
     <author>Jean-Bernard van Zuylen</author>
     <support>https://github.com/jbvanzuylen/cf-twitter-gateway/issues</support>
     <created>@RELEASE_DATE@</created>
