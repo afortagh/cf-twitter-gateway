@@ -55,7 +55,7 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
       cb.setOAuthAccessToken((String) config.get(OAUTH_ACCESS_TOKEN));
       cb.setOAuthAccessTokenSecret((String) config.get(OAUTH_ACCESS_SECRET));
       cb.setUserStreamRepliesAllEnabled(Boolean.valueOf((String) config.get(ALL_REPLIES)));
-      cb.setJSONStoreEnabled("JSON".equals(config.get(ARGUMENT_TYPE)));
+      cb.setJSONStoreEnabled(ArgumentType.JSON.equals(this.argType));
       super.init(engine, id, cb.build());
     }
     catch (Throwable t)
