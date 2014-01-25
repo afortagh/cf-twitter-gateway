@@ -107,6 +107,7 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
   public void onStatus(final Status status)
   {
     final Struct data = RailoUtils.createStruct();
+    data.put("format", this.argType.toString());
     if (ArgumentType.JSON.equals(this.argType))
     {
       data.put("status", DataObjectFactory.getRawJSON(status));
@@ -145,6 +146,7 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
   public void onDirectMessage(final DirectMessage directMessage)
   {
     final Struct data = RailoUtils.createStruct();
+    data.put("format", this.argType.toString());
     if (ArgumentType.JSON.equals(this.argType))
     {
       data.put("directMessage", DataObjectFactory.getRawJSON(directMessage));
