@@ -24,12 +24,12 @@ public enum ArgumentType
   JAVA("Java objects");
 
   private String configValue;
-  
+
   private ArgumentType(final String configValue)
   {
     this.configValue = configValue;
   }
-  
+
   /**
    * Returns the <code>ArgumentType</code> for the specified value
    * 
@@ -51,8 +51,7 @@ public enum ArgumentType
   }
 
   /**
-   * Returns the default type for the argument to be passed to
-   * the listener
+   * Returns the default type for the argument to be passed to the listener
    * 
    * @return
    */

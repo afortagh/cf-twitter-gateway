@@ -39,9 +39,9 @@ import twitter4j.json.DataObjectFactory;
 public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway implements UserStreamListener
 {
   public static final String ALL_REPLIES = "enableAllReplies";
-  
+
   private ArgumentType argType = ArgumentType.getDefault();
-  
+
   @Override
   @SuppressWarnings("rawtypes")
   public void init(final GatewayEngine engine, final String id, final String cfcPath, final Map config) throws IOException
@@ -62,7 +62,7 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
     {
       final IOException ex = new IOException("Unable to initialize gateway", t);
       this.onException(ex);
-      throw ex; 
+      throw ex;
     }
   }
 
@@ -101,7 +101,7 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
   {
     this.onException(new UnsupportedOperationException("onStallWarning"));
   }
-  
+
   @Override
   @SuppressWarnings("unchecked")
   public void onStatus(final Status status)
@@ -126,14 +126,14 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
   }
 
   @Override
-  public void onBlock(final User source, final User blockedUser) 
+  public void onBlock(final User source, final User blockedUser)
   {
     this.onException(new UnsupportedOperationException("onBlock"));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public void onDeletionNotice(final long directMessageId, final long userId) 
+  public void onDeletionNotice(final long directMessageId, final long userId)
   {
     final Struct data = RailoUtils.createStruct();
     data.put("directMessageId", directMessageId);
@@ -159,7 +159,7 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
   }
 
   @Override
-  public void onFavorite(final User source, final User target, final Status favoritedStatus) 
+  public void onFavorite(final User source, final User target, final Status favoritedStatus)
   {
     this.onException(new UnsupportedOperationException("onFavorite"));
   }
@@ -171,31 +171,31 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
   }
 
   @Override
-  public void onFriendList(final long[] friendIds) 
+  public void onFriendList(final long[] friendIds)
   {
     this.onException(new UnsupportedOperationException("onFriendList"));
   }
 
   @Override
-  public void onUnblock(final User source, final User unblockedUser) 
+  public void onUnblock(final User source, final User unblockedUser)
   {
     this.onException(new UnsupportedOperationException("onUnblock"));
   }
 
   @Override
-  public void onUnfavorite(final User source, final User target, final Status unfavoritedStatus) 
+  public void onUnfavorite(final User source, final User target, final Status unfavoritedStatus)
   {
     this.onException(new UnsupportedOperationException("onUnfavorite"));
   }
 
   @Override
-  public void onUserListCreation(final User listOwner, final UserList list) 
+  public void onUserListCreation(final User listOwner, final UserList list)
   {
     this.onException(new UnsupportedOperationException("onUserListCreation"));
   }
 
   @Override
-  public void onUserListDeletion(final User listOwner, final UserList list) 
+  public void onUserListDeletion(final User listOwner, final UserList list)
   {
     this.onException(new UnsupportedOperationException("onUserListDeletion"));
   }
@@ -207,31 +207,31 @@ public class RailoTwitterUserStreamGateway extends AbstractRailoTwitterGateway i
   }
 
   @Override
-  public void onUserListMemberDeletion(final User deletedMember, final User listOwner, final UserList list) 
+  public void onUserListMemberDeletion(final User deletedMember, final User listOwner, final UserList list)
   {
     this.onException(new UnsupportedOperationException("onUserListMemberDeletion"));
   }
 
   @Override
-  public void onUserListSubscription(final User subscriber, final User listOwner, final UserList list) 
+  public void onUserListSubscription(final User subscriber, final User listOwner, final UserList list)
   {
     this.onException(new UnsupportedOperationException("onUserListSubscription"));
   }
 
   @Override
-  public void onUserListUnsubscription(final User subscriber, final User listOwner, final UserList list) 
+  public void onUserListUnsubscription(final User subscriber, final User listOwner, final UserList list)
   {
     this.onException(new UnsupportedOperationException("onUserListUnsubscription"));
   }
 
   @Override
-  public void onUserListUpdate(final User listOwner, final UserList list) 
+  public void onUserListUpdate(final User listOwner, final UserList list)
   {
     this.onException(new UnsupportedOperationException("onUserListUpdate"));
   }
 
   @Override
-  public void onUserProfileUpdate(final User updatedUser) 
+  public void onUserProfileUpdate(final User updatedUser)
   {
     this.onException(new UnsupportedOperationException("onUserProfileUpdate"));
   }

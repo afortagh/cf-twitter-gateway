@@ -38,10 +38,10 @@ public abstract class AbstractRailoTwitterGateway implements TwitterGatewayConst
 
   private static final String GATEWAY_TYPE_KEY = "GATEWAYTYPE";
 
-  //private static final String ORIGINATOR_ID_KEY = "ORIGINATORID";
+  // private static final String ORIGINATOR_ID_KEY = "ORIGINATORID";
 
   private static final String DATA_KEY = "DATA";
-  
+
   private String id;
 
   private int state = Gateway.STOPPED;
@@ -58,7 +58,7 @@ public abstract class AbstractRailoTwitterGateway implements TwitterGatewayConst
     this.engine = engine;
     this.config = config;
   }
-  
+
   /**
    * Returns the id of this gateway
    * 
@@ -137,7 +137,7 @@ public abstract class AbstractRailoTwitterGateway implements TwitterGatewayConst
       throw ex;
     }
   }
-  
+
   /**
    * Restarts this gateway
    */
@@ -153,7 +153,7 @@ public abstract class AbstractRailoTwitterGateway implements TwitterGatewayConst
    * 
    * @param ex the exception to be handled
    */
-  public void onException(final Exception ex) 
+  public void onException(final Exception ex)
   {
     this.engine.log(this, GatewayEngine.LOGLEVEL_ERROR, RailoUtils.createLogMessage(ex));
   }
