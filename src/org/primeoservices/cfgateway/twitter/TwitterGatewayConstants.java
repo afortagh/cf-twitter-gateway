@@ -21,14 +21,14 @@ package org.primeoservices.cfgateway.twitter;
 public interface TwitterGatewayConstants
 {
   public final static String GATEWAY_TYPE = "Twitter";
-  
-	public final static String OAUTH_CONSUMER_KEY = "oAuthConsumerKey";
-	
-	public final static String OAUTH_CONSUMER_SECRET = "oAuthConsumerSecret";
-	
-	public final static String OAUTH_ACCESS_TOKEN = "oAuthAccessToken";
-	
-	public final static String OAUTH_ACCESS_SECRET = "oAuthAccessTokenSecret";
-	
-	public final static String ARGUMENT_TYPE = "argumentType";
+
+  public final static String OAUTH_CONSUMER_KEY = "oAuthConsumerKey";
+
+  public final static String OAUTH_CONSUMER_SECRET = "oAuthConsumerSecret";
+
+  public final static String OAUTH_ACCESS_TOKEN = "oAuthAccessToken";
+
+  public final static String OAUTH_ACCESS_SECRET = "oAuthAccessTokenSecret";
+
+  public final static String ARGUMENT_TYPE = "argumentType";
 }
