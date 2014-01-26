@@ -1,6 +1,7 @@
-*.class
+# Build directories #
+build/
+dist/
 
 # Package Files #
-*.jar
 *.war
 *.ear
