@@ -45,7 +45,7 @@
     <!--- Update jars --->
     <cfset dirPath = arguments.path & "lib" />
     <cfdirectory action="list" directory="#dirPath#" type="file" filter="*.jar" name="dirContent">
-    <cfloop query="#dirContent#">
+    <cfloop query="dirContent">
       <cffile action="copy"
               source="#dirPath#/#dirContent.name#"
               destination="#serverPath#/lib/#dirContent.name#"
@@ -55,7 +55,7 @@
     <!--- Update drivers --->
     <cfset dirPath = arguments.path & "driver" />
     <cfdirectory action="list" directory="#dirPath#" type="file" filter="*.cfc" name="dirContent">
-    <cfloop query="#dirContent#">
+    <cfloop query="dirContent">
       <cffile action="copy"
               source="#dirPath#/#dirContent.name#"
               destination="#serverPath#/context/admin/gdriver/#dirContent.name#"
@@ -68,7 +68,7 @@
     </cfif>
     <cfset dirPath = arguments.path & "listener" />
     <cfdirectory action="list" directory="#dirPath#" type="file" filter="*.cfc" name="dirContent">
-    <cfloop query="#dirContent#">
+    <cfloop query="dirContent">
       <cffile action="copy"
               source="#dirPath#/#dirContent.name#"
               destination="#serverPath#/components/railo/extension/gateway/twitter/#dirContent.name#"
